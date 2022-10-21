@@ -1,0 +1,32 @@
+@use '../variables/colors' as *;
+// Features Edit
+.main-title {
+  svg {
+    color: $green;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    width: 120px;
+    height: 2px;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: $green;
+  }
+}
+
+.features .icon-holder {
+  height: 200px;
+  svg {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .number {
+    font-size: 12rem;
+    color: $section;
+  }
+  .icon {
+    color: $green;
+  }
+}

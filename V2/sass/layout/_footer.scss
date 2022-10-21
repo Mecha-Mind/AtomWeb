@@ -1,0 +1,24 @@
+.footer {
+  width: 100%;
+  background-color: #888;
+  color: #fff;
+  .facebook {
+    transition: .8s;
+    &:hover {
+      color: blue;
+    }
+  }
+  .youtube {
+    transition: .8s;
+    &:hover {
+      color: red;
+    }
+    
+  }
+  .twitter {
+    transition: .8s;
+    &:hover {
+      color: green
+    }
+  }
+}

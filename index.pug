@@ -1,0 +1,184 @@
+//- include Variables
+include includes/vars
+include includes/mixins
+doctype html
+html(lang="en" dir="ltr")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title #{temp_name.toUpperCase()}
+    //- include Styles
+    include includes/styles
+  body
+    nav(class="navbar navbar-expand-lg sticky-top")
+      .container 
+        a(class="navbar-brand" href="#")
+          h2 #{temp_name}
+            i(class="fa-solid fa-tornado")
+          //- This explode nav height
+              <p>We Do Shiping</p>
+        button(
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#main"
+          aria-controls="main"
+          aria-expanded="false"
+          aria-label="Toggle navigation")
+            i(class="fa-solid fa-bars")
+        div(class="collapse navbar-collapse" id="main")
+          ul(class="navbar-nav ms-auto mb-2 mb-lg-0")
+            li.nav-item
+              a(class="nav-link p-lg-3 active" aria-current="page" href="#") Home
+            each link in nav_links
+              li.nav-item
+                a(class="nav-link p-lg-3" aria-current="page" href="#") #{link}
+          div(class="search ps-3 pe-3 d-none d-lg-block")
+            i(class="fa-solid fa-magnifying-glass")
+          a(href="#" class="btn btn-primary rounded-pill main-btn") Login
+    // End nav
+    // Start Landing
+    div(class="landing d-flex justify-content-center align-items-center")
+      .overlay
+      div(class="text-center text-light")
+        h2 Taste Da Gang Mood
+        p(class="fs-6 text-white-50 mb-5") Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        a(href="#" class="btn btn-primary main-btn") Get Started
+    // End Landing
+    // Start Features
+    div(class="features text-center pt-5 pb-5")
+      .container
+        +main_title('We Are Good At','Some Of These Stuff Under', 'fa-hands-holding-circle')
+        .row
+          +feat_section('fa-1','fa-hands-holding-circle','Proffesional Team','Lorem ipsum dolor sit amet consectetur adipisicing elit.')
+          +feat_section('fa-2','fa-truck-fast','Proffesional Team','Lorem ipsum dolor sit amet consectetur adipisicing elit.')
+          +feat_section('fa-3','fa-plane-departure','Proffesional Team','Lorem ipsum dolor sit amet consectetur adipisicing elit.')
+    // End Features
+    // Start Our Work
+    div(class="our-work text-center pt-5 pb-5")
+      .container
+        +main_title('We Do This','Prepare To Be Amazed', 'fa-tents')
+        ul(class="list-unstyled d-flex justify-content-center mt-5 mb-5")
+          li(class="active rounded-pill") All
+          each btn in our_work_nav
+            li= btn
+        .row
+          //- -for(i = 0; i < 9; i++)
+          //-   div(class="col-sm-6 col-md-4 col-lg-3")
+          //-     div(class="box mb-3 bg-white" data-work="Application")
+          //-       img(src="./imgs/02.jpg" alt="" class="img-fluid"))
+          div(class="col-sm-6 col-md-4 col-lg-3")
+            div(class="box mb-3 bg-white" data-work="Application")
+              img(src="./imgs/02.jpg" alt="" class="img-fluid")
+          div(class="col-sm-6 col-md-4 col-lg-3")
+            div(class="box mb-3 bg-white" data-work="Application")
+              img(src="./imgs/03.jpg" alt="" class="img-fluid")
+          div(class="col-sm-6 col-md-4 col-lg-3")
+            div(class="box mb-3 bg-white" data-work="Application")
+              img(src="./imgs/04.jpg" alt="" class="img-fluid")
+          div(class="col-sm-6 col-md-4 col-lg-3")
+            div(class="box mb-3 bg-white" data-work="Application")
+              img(src="./imgs/02.jpg" alt="" class="img-fluid")
+          div(class="col-sm-6 col-md-4 col-lg-3")
+            div(class="box mb-3 bg-white" data-work="Application")
+              img(src="./imgs/03.jpg" alt="" class="img-fluid")
+          div(class="col-sm-6 col-md-4 col-lg-3")
+            div(class="box mb-3 bg-white" data-work="Application")
+              img(src="./imgs/04.jpg" alt="" class="img-fluid")
+          div(class="col-sm-6 col-md-4 col-lg-3")
+            div(class="box mb-3 bg-white" data-work="Application")
+              img(src="./imgs/02.jpg" alt="" class="img-fluid")
+          div(class="col-sm-6 col-md-4 col-lg-3")
+            div(class="box mb-3 bg-white" data-work="Application")
+              img(src="./imgs/03.jpg" alt="" class="img-fluid")
+        div(class="d-flex justify-content-center mt-5")
+          a(href="#" class="btn btn-primary main-btn rounded-pill text-uppercase") Want More !!
+    // End Our Work
+    // Start Stuff Work
+    div(class="stuff pt-5")
+      .container
+        +main_title('Our Stuff','The Great Team', 'fa-snowflake')
+        p(class="desc text-center mb-5 text-black-50 m-auto") Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam doloribus alias suscipit vero quod et quis porro sequi illum sunt assumenda molestias mollitia.
+        div(class="row align-items-center")
+          div(class="col-lg-4 mb-4 text-center text-md-start")
+            .text
+              h4 #{temp_name} Shiping
+              p(class="text-black-50 fs-6") Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint adipisci fugit aliquam est!
+              p(class="text-black-50 fs-6") Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint adipisci fugit aliquam est!Lorem Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime, natus soluta reiciendis tenetur veritatis non nobis eaque! nobis voluptas molestias corporis fugit soluta, fugiat, eos porro aliquam?
+              a(href="#" class="btn btn-primary main-btn rounded-pill text-uppercase") Order Now
+          div(class="col-lg-8")
+            .stuff-image
+              img(class="img-fluid rounded" src="./imgs/04.jpg" alt="")
+    // End Stuff Work
+    // Start our-Team
+    div(class="team text-center pb-5 pt-5")
+      .container
+        h3.fw-bold Meet The Team
+        p(class="text-black-50 mb-5 lh-lg") Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat labore aspernatur temporibus cupiditate fuga beatae dolorem reiciendis quasi nulla blanditiis, velit earum, qui dicta non ducimus, delectus ex similique corporis.
+        .row
+          +our_stuff('team5', 'Mohamed Magdy', '“Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia qui tempora dolorem.”')
+          +our_stuff('team2', 'Momen Magdy', '“Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia qui tempora dolorem.”')
+          +our_stuff('team3', 'Luke Skywalker', '“Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia qui tempora dolorem.”')
+          +our_stuff('team6', 'Hani Abdallah', '“Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia qui tempora dolorem.”')
+    // End our-Team
+    // Start Technology
+    div(class="techs pt-5 pb-5 text-center")
+      .container
+        div(class="row align-items-center")
+          div(class="col-sm-6 col-md-4 col-lg-2 mt-3 mb-3")
+            i(class="fa-solid fa-gifts fa-3x")
+          div(class="col-sm-6 col-md-4 col-lg-2 mt-3 mb-3")
+            i(class="fa-solid fa-tents fa-3x")
+          div(class="col-sm-6 col-md-4 col-lg-2 mt-3 mb-3")
+            i(class="fa-solid fa-globe fa-3x")
+          div(class="col-sm-6 col-md-4 col-lg-2 mt-3 mb-3")
+            i(class="fa-solid fa-truck-plane fa-3x")
+          div(class="col-sm-6 col-md-4 col-lg-2 mt-3 mb-3")
+            i(class="fa-solid fa-parachute-box fa-3x")
+          div(class="col-sm-6 col-md-4 col-lg-2 mt-3 mb-3")
+            i(class="fa-solid fa-gifts fa-3x")
+    // End Technology
+    // Start Footer
+    div(class="footer pt-5 pb-5")
+      .container
+        .row
+          div(class="box col-md-4 text-center")
+            h3 #{temp_name}
+            ul(class="social list-unstyled d-flex justify-content-center gap-4")
+              li
+                a(href="#" class="facebook nav-link p-lg-3")
+                  i(class="fab fa-facebook-f fa-2x")
+              li
+                a(href="#" class="youtube nav-link p-lg-3")
+                  i(class="fab fa-youtube fa-2x")
+              li
+                a(href="#" class="twitter nav-link p-lg-3")
+                  i(class="fab fa-twitter fa-2x")
+            p(class="text")
+              |  Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis totam nihil unde incidunt soluta rerum necessitatibus voluptatem cupiditate.
+          div(class="box col-md-4 text-center")
+            ul(class="social")
+              li
+                a(href="#" class="p-lg-3 nav-link") imp link
+              li
+                a(href="#" class="p-lg-3 nav-link") imp link
+              li
+                a(href="#" class="p-lg-3 nav-link") imp link
+              li
+                a(href="#" class="p-lg-3 nav-link") imp link
+          div(class="box col-md-4 text-center")
+            div(class="line pt-3 pb-3")
+              i(class="fas fa-map-marker-alt fa-lg")
+              p.info Egypt, Ismailia, Inside My House Room 2
+            div(class="line pt-3")
+              i(class="far fa-clock fa-lg")
+              p.info Business Hours: From 11:59 To 11:59
+            div(class="line pt-3")
+              i(class="fas fa-phone-volume fa-lg")
+              p.info
+                span +201888888888
+                span +201999999999
+    // End Footer
+    // include Scripts
+    include includes/scripts

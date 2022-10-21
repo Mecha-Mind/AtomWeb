@@ -1,0 +1,168 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Hanldee", cursive;
+}
+
+.navbar {
+  background-color: #19283f;
+}
+.navbar .navbar-brand h2 {
+  color: #33d1cc;
+}
+.navbar .navbar-brand p {
+  font-size: 14px;
+  color: #fff;
+}
+.navbar .navbar-nav .nav-link {
+  color: #fff;
+}
+.navbar .navbar-nav .nav-link.active, .navbar .navbar-nav .nav-link:focus, .navbar .navbar-nav .nav-link:hover {
+  color: #33d1cc;
+}
+.navbar .search {
+  border-left: 1px solid #33d1cc;
+}
+.navbar .search svg {
+  color: #33d1cc;
+}
+.navbar .navbar-toggler {
+  color: #fff;
+  font-size: 22px;
+  border-color: #959595;
+}
+.navbar .navbar-toggler:focus {
+  box-shadow: none;
+}
+.navbar .navbar-toggler[aria-expanded=true] {
+  color: #33d1cc;
+  border-color: #33d1cc;
+}
+
+.landing {
+  position: relative;
+  background: url("../../imgs/01.jpg");
+  background-size: cover;
+  min-height: calc(100vh - 72px);
+}
+.landing .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.landing div {
+  z-index: 1;
+}
+
+.main-title svg {
+  color: #33d1cc;
+}
+.main-title::after {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 2px;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #33d1cc;
+}
+
+.features .icon-holder {
+  height: 200px;
+}
+.features .icon-holder svg {
+  left: 50%;
+  transform: translateX(-50%);
+}
+.features .icon-holder .number {
+  font-size: 12rem;
+  color: #eff7fa;
+}
+.features .icon-holder .icon {
+  color: #33d1cc;
+}
+
+.our-work {
+  background-color: #eff7fa;
+}
+.our-work ul .active {
+  background-color: #33d1cc;
+  color: #19283f;
+}
+.our-work li {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.our-work li:not(.active):hover {
+  color: #33d1cc;
+}
+.our-work .box {
+  padding: 5px;
+  overflow: hidden;
+  position: relative;
+}
+.our-work .box::before {
+  content: attr(data-work);
+  position: absolute;
+  background-color: rgba(127, 255, 212, 0.3);
+  width: calc(100% - 10px);
+  height: calc(100% - 10px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: #fff;
+  transition: 0.3s;
+  font-size: 1.5rem;
+  transform: translateX(calc(-100% - 5px));
+}
+.our-work .box:hover::before {
+  transform: translateX(0);
+}
+
+.stuff .desc {
+  max-width: 500px;
+}
+
+.team {
+  background-color: #eff7fa;
+}
+.team h2 {
+  color: #19283f;
+}
+.team .box h4 {
+  background-color: #33d1cc;
+}
+
+.footer {
+  width: 100%;
+  background-color: #888;
+  color: #fff;
+}
+.footer .facebook {
+  transition: 0.8s;
+}
+.footer .facebook:hover {
+  color: blue;
+}
+.footer .youtube {
+  transition: 0.8s;
+}
+.footer .youtube:hover {
+  color: red;
+}
+.footer .twitter {
+  transition: 0.8s;
+}
+.footer .twitter:hover {
+  color: green;
+}/*# sourceMappingURL=master.css.map */

@@ -1,0 +1,21 @@
+mixin main_title(head,body, pic)
+  div(class=`main-title text-center mb-4 mt-4 position-relative`)
+    i(class=`fa-solid ${pic} fa-3x`)
+    h3= head
+    p(class="text-black-50 text-uppercase")= body
+
+mixin feat_section(pic1,pic2,head,body)
+  div(class="col-md-6 col-lg-4")
+    .feat
+      div(class="icon-holder position-relative")
+        i(class=`fa-solid ${pic1} position-absolute bottom-0 number`)
+        i(class=`fa-solid ${pic2} fa-3x position-absolute bottom-0 icon`)
+      h4(class="mt-3 mb-3 text-uppercase")= head
+      p(class="text-black-50 lh-lg")= body
+
+mixin our_stuff(n, name, desc)
+  div(class="col-md-6 col-lg-3")
+    div(class="box bg-white")
+      img(class="img-fluid" src=`./imgs/${n}.jpg` alt="")
+      h4(class="text-light p-3")= name
+      blockquote(class="text-black-50 p-3")= desc

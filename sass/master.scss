@@ -1,0 +1,15 @@
+// include global rules
+@use './layout/global-rules';
+
+@use './layout/header';
+
+// include landing page
+@use './pages/landing-page';
+
+@use './pages/feat-page';
+
+@use './pages/our-work';
+
+@use './pages/stuff';
+
+@use './layout/footer';
