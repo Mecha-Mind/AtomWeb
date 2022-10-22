@@ -139,13 +139,64 @@ html(lang="en" dir="ltr")
           div(class="col-sm-6 col-md-4 col-lg-2 mt-3 mb-3")
             i(class="fa-solid fa-gifts fa-3x")
     // End Technology
+    // Start Project 
+    div(class="project pt-5 pb-5 text-center text-light")
+      h2 Start Your Project Now.
+      p(class="text-white-50") Leave Your Description And Start Your Project
+      div(class="d-flex justify-content-center mt-5 mb-5")
+          a(href="#" class="btn btn-primary main-btn rounded-pill text-uppercase") Start Project !
+    // End Project
+    //- Start Blog
+    div(class="team text-center pb-5 pt-5")
+      .container
+        +main_title('Read Our Blog','New Stories', 'fa-snowflake')
+        div(class="row pt-5 pb-5")
+          div(class="col-md-6 col-lg-4")
+            .card
+              img(src="imgs/04.jpg", alt="Blog Post", srcset="")
+              .card-body
+                span Oct 20, 2022
+                h5.card-title Blog Title Here
+          div(class="col-md-6 col-lg-4")
+            .card
+              img(src="imgs/02.jpg", alt="Blog Post", srcset="")
+              .card-body
+                span Oct 20, 2022
+                h5.card-title Blog Title Here
+          div(class="col-md-6 col-lg-4")
+            .card
+              img(src="imgs/03.jpg", alt="Blog Post", srcset="")
+              .card-body
+                span Oct 20, 2022
+                h5.card-title Blog Title Here
+          div(class="col-md-6 col-lg-4")
+            .card
+              img(src="imgs/01.jpg", alt="Blog Post", srcset="")
+              .card-body
+                span Oct 20, 2022
+                h5.card-title Blog Title 
+        div(class="d-flex justify-content-center mt-5 mb-5")
+          a(href="#" class="btn btn-primary main-btn rounded-pill text-uppercase") More Stories!
+    //- End Blog
+    //- Start Subscribe
+    div(class="subscribe text-center pb-5 pt-5 text-md-start")
+      .container
+        div(class="row align-items-center pt-5 pb-5")
+          div(class="col-md-6 col-lg-3")
+            div(class="fs-5 fw-bold mb-3") Subsribe to Our Newsletter:
+          div(class="col-md-6 col-lg-7 mb-sm-5 mb-lg-0")
+            input(class="w-100 text-light p-2 bg-transparent" type="text" placeholder="Enter email")
+          div(class="col-md-6 col-lg-2")
+            input(class="btn rounded-pill" type="submit" value="Subscribe")
+
+    //- End Subscribe
     // Start Footer
     div(class="footer pt-5 pb-5")
       .container
         .row
-          div(class="box col-md-4 text-center")
+          div(class="box col-md-6 col-lg-4 text-center")
             h3 #{temp_name}
-            ul(class="social list-unstyled d-flex justify-content-center gap-4")
+            ul(class="social mt-4 list-unstyled d-flex justify-content-center gap-4")
               li
                 a(href="#" class="facebook nav-link p-lg-3")
                   i(class="fab fa-facebook-f fa-2x")
@@ -157,8 +208,18 @@ html(lang="en" dir="ltr")
                   i(class="fab fa-twitter fa-2x")
             p(class="text")
               |  Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis totam nihil unde incidunt soluta rerum necessitatibus voluptatem cupiditate.
-          div(class="box col-md-4 text-center")
-            ul(class="social")
+          div(class="box col-md-6 col-lg-2")
+            ul(class="social list-unstyled lh-lg")
+              li
+                a(href="#" class="p-lg-3 nav-link") imp link
+              li
+                a(href="#" class="p-lg-3 nav-link") imp link
+              li
+                a(href="#" class="p-lg-3 nav-link") imp link
+              li
+                a(href="#" class="p-lg-3 nav-link") imp link
+          div(class="box col-md-6 col-lg-2")
+            ul(class="social list-unstyled lh-lg")
               li
                 a(href="#" class="p-lg-3 nav-link") imp link
               li

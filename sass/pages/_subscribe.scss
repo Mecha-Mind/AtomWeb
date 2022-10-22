@@ -1,0 +1,26 @@
+@use '../variables/colors' as *;
+
+.subscribe {
+  background-color: $yellow;
+  input[type="text"] {
+    border: none;
+    border-bottom: 1px solid #fff;
+    &:focus {
+      outline: none;
+    }
+    &::placeholder {
+      color: #fff;
+    }
+  }
+  input[type="submit"] {
+    background-color: $dark;
+    color: $yellow;
+    transition: .4s;
+    border: none;
+    &:hover {
+      background-color: $section;
+      color: $dark;
+    }
+  }
+
+}

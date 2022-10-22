@@ -143,10 +143,42 @@ body {
   background-color: #33d1cc;
 }
 
-.footer {
-  width: 100%;
-  background-color: #888;
+.project {
+  background-color: #19283f;
+}
+
+.subscribe {
+  background-color: #e7b41d;
+}
+.subscribe input[type=text] {
+  border: none;
+  border-bottom: 1px solid #fff;
+}
+.subscribe input[type=text]:focus {
+  outline: none;
+}
+.subscribe input[type=text]::-moz-placeholder {
   color: #fff;
+}
+.subscribe input[type=text]:-ms-input-placeholder {
+  color: #fff;
+}
+.subscribe input[type=text]::placeholder {
+  color: #fff;
+}
+.subscribe input[type=submit] {
+  background-color: #19283f;
+  color: #e7b41d;
+  transition: 0.4s;
+  border: none;
+}
+.subscribe input[type=submit]:hover {
+  background-color: #eff7fa;
+  color: #19283f;
+}
+
+.footer {
+  background-color: #19283f;
 }
 .footer .facebook {
   transition: 0.8s;
